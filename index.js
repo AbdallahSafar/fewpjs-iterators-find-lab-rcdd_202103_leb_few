@@ -5,7 +5,10 @@ function testFunc() {
 }
 
 function superbowlWin(array) {
-  return array.find(e => e.result === "W").year
+  let res = array.find(e => e.result === "W");
+  let year;
+  (res === undefined) ? year = res: year = res.year;
+  return year;
 }
 
 const record = [
